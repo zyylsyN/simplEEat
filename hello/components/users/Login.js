@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Storage from '../../common/Storage'
 import ManagerIndex from '../manager/ManagerIndex'
 import WaiterIndex from '../waiter/WaiterIndex'
+import CookIndex from '../cook/CookIndex'
 import {postHttp} from '../../common/HttpBean'
 import {
   StyleSheet,
@@ -29,6 +30,7 @@ export default class Login extends Component {
 	    		index.setState({body:<WaiterIndex shopname={arr[1]} shoprole={arr[2]}/>});
 	    	}else if(arr[2]==2){
 	    		//后厨
+	    		index.setState({body:<CookIndex shopname={arr[1]} shoprole={arr[2]}/>});
 	    	}
 			
 	    }else{

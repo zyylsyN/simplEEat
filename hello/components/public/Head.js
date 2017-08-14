@@ -36,6 +36,7 @@ export default class Head extends Component {
 		}
 	    return (
 	        <View style={[Layout.top,{flexDirection:'row',justifyContent:'flex-end',alignItems:'center'}]}>
+	          <Text style={{backgroundColor:'#00ffff',justifyContent:'space-between'}} onPress={()=>{Storage.getInstance().getProp('waiterIndex').back();}}>后退</Text>
 	          <Text style={{flexGrow:1,textAlign:'center',backgroundColor:'#fff'}}>{this.props.shopname}{roleName}</Text>
 	          <Button
 	            onPress={()=>{this.logout()}}

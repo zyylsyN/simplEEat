@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {getHttp} from '../../common/HttpBean'
 import {
   StyleSheet,
   Dimensions,     //获取屏幕高宽

@@ -5,3 +5,4 @@ import {
 } from 'react-native';
 
 AppRegistry.registerComponent('hello', () => Index);
+ 

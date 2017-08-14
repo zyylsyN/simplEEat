@@ -11,7 +11,7 @@
 </div>
 <script>
 //-----显示菜品管理----------------------
-  function dishes(typeid){
+function dishes(typeid){
     $('#t'+typeid).toggle(function(){
       if(this.style.display==''){
         dishForm.menuid.value=typeid;
@@ -19,7 +19,6 @@
       }
       
     });
-    
   }
 
   
@@ -27,6 +26,7 @@
   function onAddClerk(){
     return true;
   }
+</script>
 </script>
 <div class="row" style="margin-top: 9px">
           <div class="col-sm-1"></div>
@@ -48,14 +48,14 @@
     <% rs.forEach(function(item){ %>
     <tr>
       <td><%-item.typename%></td>
-      <td><a href='#' onclick='dishes(<%-item.id%>)'>有<b id='n<%-item.id%>' style='color:red'><%-item.num%></b>种菜品</a></td>
+      <td><a href='#' onclick='dishes(<%-item.id%>)'>有<b style='color:red' id='n<%-item.id%>'><%-item.num%></b>种菜品</a></td>
       <td>
         <a href='#'>修改</a>&nbsp;
         <a href='#'>删除</a>
       </td>
     </tr>
     <tr id='t<%-item.id%>' style='display:none'>
-      <td colspan="3" align="center"></td>
+      <td colspan="3" align="center">aaaaaaaaaa</td>
     </tr>
     <% }) %>
   </tbody>
@@ -97,7 +97,15 @@
     </div><!-- /.modal -->
 </div>
 
+
+
           <!----------------菜品modal------------------------ -->
+<script>
+  function onAddDish(){
+    return true;
+  }
+</script>
+ 		  <!----------------菜品modal------------------------ -->
           <% include ./dishAdd %>
           <!-- ----------------菜单分类modal------------  -->
           </div>

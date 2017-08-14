@@ -13,7 +13,7 @@ function updDish(thisa,dishId){
 	dishForm.formBtn.value='修改';
     $('#dishModal').modal('show');
   }
- function delDish(menuid,dishid){
+function delDish(menuid,dishid){
  	if(confirm('确定删除此道菜品吗?')){
  		$.get('./delDish?dishid='+dishid+'&menuid='+menuid,function(data){
  			if(data==1){
@@ -61,6 +61,8 @@ function updDish(thisa,dishId){
         <a href='#'>下架</a>&nbsp;
         <a href='#' onclick='updDish(this,<%-item.id%>)'>修改</a>&nbsp;
         <a href='#' onclick='delDish(<%-item.menuid%>,<%-item.id%>)'>删除</a>
+         &nbsp;
+        <a href='./bindkeys?dishid=<%-item.id%>&dishname=<%-item.dishname%>' target="_blank">绑定关键词</a>
       </td>
     </tr>
     <tr id='t<%-item.id%>' style='display:none'>
